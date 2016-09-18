@@ -1,12 +1,21 @@
 body {
-	padding-top:50px;
+//	padding-top:50px;
 }
 
 #hero {
-	.container-fluid,
+
+	background-size: cover;
+
+	#hero-inner {
+		background-color: rgba(0,0,0,0.3);
+		padding-top: 70px;
+	}
+
+/*	.container-fluid,
 	.container {
 		padding:0;
 	}
+	*/
 	.row {
 		margin:0;
 	}
@@ -16,35 +25,34 @@ body {
 }
 
 #intro {
-	height:70vh;
-	background-size: cover;
+
+	padding-top: 40vh;
+	padding-bottom: $inner-padding*2;
+
+	color: white;
+	text-shadow: 0 2px 10px #0F0F0F;
 
 	a {
 		display: block;
 		position: relative;
-		padding: $inner-padding;
 		height:100%;
 		color: white;
-		background-color: rgba(0,0,0,0.6);
-		transition: all 0.3s ease-in-out;
 
 		&:hover,
 		&:active,
 		&:focus {
 			text-decoration: none;
-			background-color: rgba(0,0,0,0.25);
 		}
 	}
 
-	.inner {
-		text-shadow: 0 2px 10px #0F0F0F;
-		position: absolute;
-		bottom:$inner-padding*3;
-		left: $inner-padding;
-		right:$inner-padding;
+	h1 {
+		font-size: $font-size-huge;
+		font-style: italic;
+		margin-top:-20px;
 	}
 
 	.lead {
+		font-size: $font-size-h3;
 		display:inline;
 		border-bottom: 2px solid rgba(255,255,255,0.4);
 	}
@@ -56,37 +64,25 @@ body {
 }
 
 #featured {
-
-	@media (min-width: $screen-md-min){
-		height:70vh;
-		overflow:hidden;
-	}
-
-	.inner {
-		padding: $inner-padding;
-	}
+	padding-top: $inner-padding*2;
+	padding-bottom: $inner-padding*2;
 }
 
-#info {
-	background: $brand-primary;
-	color: #fff;
-	padding: $inner-padding 0;
-
-	a {
-		color:#fff;
-		border-bottom: 2px solid rgba(255,255,255,0.4);
-
-		&:hover {
-			border-color: rgba(255,255,255,1);
-		}
-	}
+#intro,
+#featured {
 
 	@media (min-width: $screen-md-min) {
-		h3,p { margin:0; padding:0; }
+		padding-top: 40vh;
+		padding-bottom: $inner-padding*4;
 	}
+
 }
 
-#teasers {
+#events-latest {
+	padding: $inner-padding 0;
+}
+
+#news-latest {
 	background-color: $gray-lighter;
 	@extend .clearfix;
 	padding: $inner-padding 0;
@@ -97,10 +93,31 @@ body {
 	background-color: #fff;
 	margin-bottom: $inner-padding;
 
+	.row {
+		margin:0;
+	}
+	div[class^="col-"] {
+		padding:0;
+	}
+
 	.inner {
 		padding:$inner-padding;
 	}
 
+}
+
+.teaser-event {
+	border: 1px solid $brand-primary;
+}
+
+.event-meta {
+	.event-date {
+
+	}
+	.event-category {
+		text-transform: uppercase;
+		color:$gray-light;
+	}
 }
 
 .content-article {

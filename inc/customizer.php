@@ -33,37 +33,6 @@ function twentyfifteen_customize_register( $wp_customize ) {
 		) );
 	}
 
-	// Add color scheme setting and control.
-	$wp_customize->add_setting( 'color_scheme', array(
-		'default'           => 'default',
-		'sanitize_callback' => 'twentyfifteen_sanitize_color_scheme',
-		'transport'         => 'postMessage',
-	) );
-
-	$wp_customize->add_control( 'color_scheme', array(
-		'label'    => __( 'Base Color Scheme', 'twentyfifteen' ),
-		'section'  => 'colors',
-		'type'     => 'select',
-		'choices'  => twentyfifteen_get_color_scheme_choices(),
-		'priority' => 1,
-	) );
-
-	// Add custom header and sidebar text color setting and control.
-	$wp_customize->add_setting( 'sidebar_textcolor', array(
-		'default'           => $color_scheme[4],
-		'sanitize_callback' => 'sanitize_hex_color',
-		'transport'         => 'postMessage',
-	) );
-
-	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'sidebar_textcolor', array(
-		'label'       => __( 'Header and Sidebar Text Color', 'twentyfifteen' ),
-		'description' => __( 'Applied to the header on small screens and the sidebar on wide screens.', 'twentyfifteen' ),
-		'section'     => 'colors',
-	) ) );
-
-	// Remove the core header textcolor control, as it shares the sidebar text color.
-	$wp_customize->remove_control( 'header_textcolor' );
-
 	// Add custom header and sidebar background color setting and control.
 	$wp_customize->add_setting( 'header_background_color', array(
 		'default'           => $color_scheme[1],
@@ -81,6 +50,58 @@ function twentyfifteen_customize_register( $wp_customize ) {
 	$wp_customize->get_section( 'header_image' )->description = __( 'Applied to the header on small screens and the sidebar on wide screens.', 'twentyfifteen' );
 }
 add_action( 'customize_register', 'twentyfifteen_customize_register', 11 );
+
+function ochor_customize_register( $wp_customize ) {
+
+	$wp_customize->remove_section( 'colors' );
+	$wp_customize->remove_section( 'background_image' );
+
+	$wp_customize->add_section( 'ochor_header' , array(
+    'title'      => __( 'Header-Text', 'ochor' ),
+    'priority'   => 30,
+	) );
+
+	$wp_customize->add_setting( 'header_title', array(
+		'default'           => 'Oh, Chor!',
+		'transport'         => 'refresh',
+	) );
+
+	$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'header_titel', array(
+		'label'        => __( 'Header-Titel', 'ochor' ),
+		'section'    => 'ochor_header',
+		'settings'   => 'header_title',
+	) ) );
+
+
+	$wp_customize->add_setting( 'header_subtitle', array(
+		'default'           => 'Bamberger Oratorienchor',
+		'transport'         => 'refresh',
+	) );
+
+	$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'header_subtitle', array(
+		'label'        => __( 'Header-Untertitel', 'ochor' ),
+		'section'    => 'ochor_header',
+		'settings'   => 'header_subtitle',
+	) ) );
+
+	$wp_customize->add_setting( 'header_link', array(
+		'default'           => 'chor',
+		'transport'         => 'refresh',
+	) );
+
+	$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'header_link', array(
+		'label'        => __( 'Header-Link', 'ochor' ),
+		'section'    => 'ochor_header',
+		'settings'   => 'header_link',
+	) ) );
+
+
+
+
+
+
+}
+add_action( 'customize_register', 'ochor_customize_register', 12 );
 
 /**
  * Render the site title for the selective refresh partial.

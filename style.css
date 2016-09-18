@@ -3768,7 +3768,7 @@ h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
   font-family: "Domine", Georgia, "Times New Roman", Times, serif;
   font-weight: 500;
-  line-height: 1.1;
+  line-height: 1.2;
   color: inherit;
 }
 /* line 16, scss/bootstrap/_type.scss */
@@ -3871,7 +3871,7 @@ p {
   margin-bottom: 20px;
   font-size: 18px;
   font-weight: 300;
-  line-height: 1.4;
+  line-height: 1.6;
 }
 
 /* line 75, scss/bootstrap/_type.scss */
@@ -7536,7 +7536,7 @@ tbody.collapse.in {
 /* line 11, scss/bootstrap/_navbar.scss */
 .navbar {
   position: relative;
-  min-height: 50px;
+  min-height: 60px;
   margin-bottom: 20px;
   border: 1px solid transparent;
 }
@@ -7695,10 +7695,10 @@ tbody.collapse.in {
 /* line 163, scss/bootstrap/_navbar.scss */
 .navbar-brand {
   float: left;
-  padding: 15px 15px;
+  padding: 20px 15px;
   font-size: 18px;
   line-height: 20px;
-  height: 50px;
+  height: 60px;
 }
 /* line 170, scss/bootstrap/_navbar.scss */
 .navbar-brand:hover, .navbar-brand:focus {
@@ -7721,8 +7721,8 @@ tbody.collapse.in {
   float: right;
   margin-right: 15px;
   padding: 9px 10px;
-  margin-top: 8px;
-  margin-bottom: 8px;
+  margin-top: 13px;
+  margin-bottom: 13px;
   background-color: transparent;
   background-image: none;
   border: 1px solid transparent;
@@ -7752,7 +7752,7 @@ tbody.collapse.in {
 
 /* line 232, scss/bootstrap/_navbar.scss */
 .navbar-nav {
-  margin: 7.5px -15px;
+  margin: 10px -15px;
 }
 /* line 235, scss/bootstrap/_navbar.scss */
 .navbar-nav > li > a {
@@ -7797,8 +7797,8 @@ tbody.collapse.in {
   }
   /* line 272, scss/bootstrap/_navbar.scss */
   .navbar-nav > li > a {
-    padding-top: 15px;
-    padding-bottom: 15px;
+    padding-top: 20px;
+    padding-bottom: 20px;
   }
 }
 
@@ -7811,8 +7811,8 @@ tbody.collapse.in {
   border-bottom: 1px solid transparent;
   -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(255, 255, 255, 0.1);
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(255, 255, 255, 0.1);
-  margin-top: 8px;
-  margin-bottom: 8px;
+  margin-top: 13px;
+  margin-bottom: 13px;
 }
 @media (min-width: 768px) {
   /* line 472, scss/bootstrap/_forms.scss */
@@ -7917,24 +7917,24 @@ tbody.collapse.in {
 
 /* line 343, scss/bootstrap/_navbar.scss */
 .navbar-btn {
-  margin-top: 8px;
-  margin-bottom: 8px;
+  margin-top: 13px;
+  margin-bottom: 13px;
 }
 /* line 346, scss/bootstrap/_navbar.scss */
 .navbar-btn.btn-sm, .btn-group-sm > .navbar-btn.btn {
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin-top: 15px;
+  margin-bottom: 15px;
 }
 /* line 349, scss/bootstrap/_navbar.scss */
 .navbar-btn.btn-xs, .btn-group-xs > .navbar-btn.btn {
-  margin-top: 14px;
-  margin-bottom: 14px;
+  margin-top: 19px;
+  margin-bottom: 19px;
 }
 
 /* line 359, scss/bootstrap/_navbar.scss */
 .navbar-text {
-  margin-top: 15px;
-  margin-bottom: 15px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 @media (min-width: 992px) {
   /* line 359, scss/bootstrap/_navbar.scss */
@@ -7963,7 +7963,7 @@ tbody.collapse.in {
 }
 /* line 397, scss/bootstrap/_navbar.scss */
 .navbar-default {
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: rgba(0, 0, 0, 0.7);
   border-color: none;
 }
 /* line 401, scss/bootstrap/_navbar.scss */
@@ -10342,12 +10342,12 @@ button.close {
   }
 }
 /* line 14, scss/bootstrap/mixins/_clearfix.scss */
-.clearfix:before, #teasers:before, .clearfix:after, #teasers:after {
+.clearfix:before, #news-latest:before, .clearfix:after, #news-latest:after {
   content: " ";
   display: table;
 }
 /* line 19, scss/bootstrap/mixins/_clearfix.scss */
-.clearfix:after, #teasers:after {
+.clearfix:after, #news-latest:after {
   clear: both;
 }
 
@@ -10703,119 +10703,124 @@ button.close {
     display: none !important;
   }
 }
-/* line 1, scss/_base.scss */
-body {
-  padding-top: 50px;
+/* line 5, scss/_styles.scss */
+#hero {
+  background-size: cover;
+  /*	.container-fluid,
+  	.container {
+  		padding:0;
+  	}
+  	*/
 }
-
-/* line 6, scss/_base.scss */
-#hero .container-fluid,
-#hero .container {
-  padding: 0;
+/* line 9, scss/_styles.scss */
+#hero #hero-inner {
+  background-color: rgba(0, 0, 0, 0.3);
+  padding-top: 70px;
 }
-/* line 10, scss/_base.scss */
+/* line 19, scss/_styles.scss */
 #hero .row {
   margin: 0;
 }
-/* line 13, scss/_base.scss */
+/* line 22, scss/_styles.scss */
 #hero div[class^="col-"] {
   padding: 0;
 }
 
-/* line 18, scss/_base.scss */
+/* line 27, scss/_styles.scss */
 #intro {
-  height: 70vh;
-  background-size: cover;
+  padding-top: 40vh;
+  padding-bottom: 30px;
+  color: white;
+  text-shadow: 0 2px 10px #0F0F0F;
 }
-/* line 22, scss/_base.scss */
+/* line 35, scss/_styles.scss */
 #intro a {
   display: block;
   position: relative;
-  padding: 15px;
   height: 100%;
   color: white;
-  background-color: rgba(0, 0, 0, 0.6);
-  transition: all 0.3s ease-in-out;
 }
-/* line 31, scss/_base.scss */
+/* line 41, scss/_styles.scss */
 #intro a:hover, #intro a:active, #intro a:focus {
   text-decoration: none;
-  background-color: rgba(0, 0, 0, 0.25);
 }
-/* line 39, scss/_base.scss */
-#intro .inner {
-  text-shadow: 0 2px 10px #0F0F0F;
-  position: absolute;
-  bottom: 45px;
-  left: 15px;
-  right: 15px;
+/* line 48, scss/_styles.scss */
+#intro h1 {
+  font-size: 72px;
+  font-style: italic;
+  margin-top: -20px;
 }
-/* line 47, scss/_base.scss */
+/* line 54, scss/_styles.scss */
 #intro .lead {
+  font-size: 24px;
   display: inline;
   border-bottom: 2px solid rgba(255, 255, 255, 0.4);
 }
-/* line 52, scss/_base.scss */
+/* line 60, scss/_styles.scss */
 #intro a:hover .lead {
   border-color: white;
 }
 
-@media (min-width: 992px) {
-  /* line 58, scss/_base.scss */
-  #featured {
-    height: 70vh;
-    overflow: hidden;
-  }
-}
-/* line 65, scss/_base.scss */
-#featured .inner {
-  padding: 15px;
+/* line 66, scss/_styles.scss */
+#featured {
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 
-/* line 70, scss/_base.scss */
-#info {
-  background: #CCA85A;
-  color: #fff;
+@media (min-width: 992px) {
+  /* line 71, scss/_styles.scss */
+  #intro,
+  #featured {
+    padding-top: 40vh;
+    padding-bottom: 60px;
+  }
+}
+
+/* line 81, scss/_styles.scss */
+#events-latest {
   padding: 15px 0;
 }
-/* line 75, scss/_base.scss */
-#info a {
-  color: #fff;
-  border-bottom: 2px solid rgba(255, 255, 255, 0.4);
-}
-/* line 79, scss/_base.scss */
-#info a:hover {
-  border-color: white;
-}
-@media (min-width: 992px) {
-  /* line 85, scss/_base.scss */
-  #info h3, #info p {
-    margin: 0;
-    padding: 0;
-  }
-}
 
-/* line 89, scss/_base.scss */
-#teasers {
+/* line 85, scss/_styles.scss */
+#news-latest {
   background-color: #eeeeee;
   padding: 15px 0;
 }
 
-/* line 95, scss/_base.scss */
+/* line 91, scss/_styles.scss */
 .teaser {
   background-color: #fff;
   margin-bottom: 15px;
 }
-/* line 100, scss/_base.scss */
+/* line 96, scss/_styles.scss */
+.teaser .row {
+  margin: 0;
+}
+/* line 99, scss/_styles.scss */
+.teaser div[class^="col-"] {
+  padding: 0;
+}
+/* line 103, scss/_styles.scss */
 .teaser .inner {
   padding: 15px;
 }
 
-/* line 107, scss/_base.scss */
+/* line 109, scss/_styles.scss */
+.teaser-event {
+  border: 1px solid #CCA85A;
+}
+
+/* line 117, scss/_styles.scss */
+.event-meta .event-category {
+  text-transform: uppercase;
+  color: #777777;
+}
+
+/* line 124, scss/_styles.scss */
 .content-article header {
   position: relative;
 }
-/* line 111, scss/_base.scss */
+/* line 128, scss/_styles.scss */
 .content-article header h1 {
   position: absolute;
   bottom: 0;
@@ -10834,20 +10839,20 @@ body {
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.65) 100%);
 }
 
-/* line 128, scss/_base.scss */
+/* line 145, scss/_styles.scss */
 #meta-nav {
   padding: 15px 0;
 }
-/* line 130, scss/_base.scss */
+/* line 147, scss/_styles.scss */
 #meta-nav ul {
   text-align: center;
   margin: 0;
 }
-/* line 134, scss/_base.scss */
+/* line 151, scss/_styles.scss */
 #meta-nav li {
   display: inline-block;
 }
-/* line 135, scss/_base.scss */
+/* line 152, scss/_styles.scss */
 #meta-nav a {
   font-size: 12px;
 }
