@@ -10,28 +10,36 @@
  */
 ?>
 
-<div class="col-xs-12 col-sm-6 col-md-4">
-          <article id="post-<?php the_ID(); ?>" class="teaser teaser-news">
-            <div class="row">
-              <div class="col-xs-5 col-sm-12">
-                <a href="#">
-									<?php
-										// Post thumbnail.
-										twentyfifteen_post_thumbnail();
-									?>
-                </a>
-              </div>
-              <div class="col-xs-7 col-sm-12">
-                <div class="inner">
-									<?php the_title( sprintf( '<h1 class="h4"><a href="%s">', esc_url( get_permalink() ) ), '</a></h1>' ); ?>
-                  <p><time><?php the_time('j. M Y'); ?></time></p>
-                  <p>
-                    <?php the_excerpt() ?>
-                  </p>
-                </div>
-              </div>
-            </div>
-          </article>
-        </div>
+  <div class="col-xs-12 col-md-4">
+    <article id="post-<?php the_ID(); ?>" class="teaser teaser-news">
+      <div class="row">
+        <?php if ( has_post_thumbnail() ) : ?>
+          <div class="col-xs-5 col-md-12">
+            <a class="post-thumbnail" href="<?php the_permalink(); ?>" aria-hidden="true">
+          		<?php the_post_thumbnail( 'post-thumbnail' , array( 'alt' => get_the_title(), 'class' => 'img-responsive' ) ); ?>
+          	</a>
+          </div>
+          <div class="col-xs-7 col-md-12">
+        <?php else : ?>
+          <div class="col-xs-12">
+        <?php endif; ?>
 
-</article><!-- #post-## -->
+            <div class="inner">
+              <?php
+              $kicker = get_post_meta($post->ID, 'kicker', true);
+              if ( $kicker ) :
+              ?>
+              <p class="kicker">
+                <?php echo $kicker; ?>
+              </p>
+              <?php endif; ?>
+    					<?php the_title( sprintf( '<h1 class="h4"><a href="%s">', esc_url( get_permalink() ) ), '</a></h1>' ); ?>
+              <?php if ( has_post_thumbnail() == false ) : ?>
+                <?php the_excerpt() ?>
+              <?php endif; ?>
+            </div>
+          </div>
+
+      </div>
+    </article>
+  </div>

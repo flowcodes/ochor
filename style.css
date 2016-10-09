@@ -3867,6 +3867,12 @@ p {
 }
 
 /* line 62, scss/bootstrap/_type.scss */
+.kicker {
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+/* line 67, scss/bootstrap/_type.scss */
 .lead {
   margin-bottom: 20px;
   font-size: 18px;
@@ -3874,65 +3880,65 @@ p {
   line-height: 1.6;
 }
 
-/* line 75, scss/bootstrap/_type.scss */
+/* line 80, scss/bootstrap/_type.scss */
 #main a:hover, #main a:focus, #main a:active {
   text-decoration: none;
 }
 
-/* line 87, scss/bootstrap/_type.scss */
+/* line 92, scss/bootstrap/_type.scss */
 small,
 .small {
   font-size: 85%;
 }
 
-/* line 92, scss/bootstrap/_type.scss */
+/* line 97, scss/bootstrap/_type.scss */
 mark,
 .mark {
   background-color: #fcf8e3;
   padding: .2em;
 }
 
-/* line 99, scss/bootstrap/_type.scss */
+/* line 104, scss/bootstrap/_type.scss */
 .text-left {
   text-align: left;
 }
 
-/* line 100, scss/bootstrap/_type.scss */
+/* line 105, scss/bootstrap/_type.scss */
 .text-right {
   text-align: right;
 }
 
-/* line 101, scss/bootstrap/_type.scss */
+/* line 106, scss/bootstrap/_type.scss */
 .text-center {
   text-align: center;
 }
 
-/* line 102, scss/bootstrap/_type.scss */
+/* line 107, scss/bootstrap/_type.scss */
 .text-justify {
   text-align: justify;
 }
 
-/* line 103, scss/bootstrap/_type.scss */
+/* line 108, scss/bootstrap/_type.scss */
 .text-nowrap {
   white-space: nowrap;
 }
 
-/* line 106, scss/bootstrap/_type.scss */
+/* line 111, scss/bootstrap/_type.scss */
 .text-lowercase {
   text-transform: lowercase;
 }
 
-/* line 107, scss/bootstrap/_type.scss */
+/* line 112, scss/bootstrap/_type.scss */
 .text-uppercase, .initialism {
   text-transform: uppercase;
 }
 
-/* line 108, scss/bootstrap/_type.scss */
+/* line 113, scss/bootstrap/_type.scss */
 .text-capitalize {
   text-transform: capitalize;
 }
 
-/* line 111, scss/bootstrap/_type.scss */
+/* line 116, scss/bootstrap/_type.scss */
 .text-muted {
   color: #777777;
 }
@@ -3992,7 +3998,7 @@ a.text-danger:focus {
   color: #843534;
 }
 
-/* line 128, scss/bootstrap/_type.scss */
+/* line 133, scss/bootstrap/_type.scss */
 .bg-primary {
   color: #fff;
 }
@@ -4052,20 +4058,20 @@ a.bg-danger:focus {
   background-color: #e4b9b9;
 }
 
-/* line 147, scss/bootstrap/_type.scss */
+/* line 152, scss/bootstrap/_type.scss */
 .page-header {
   padding-bottom: 9px;
   margin: 40px 0 20px;
   border-bottom: 1px solid #eeeeee;
 }
 
-/* line 158, scss/bootstrap/_type.scss */
+/* line 163, scss/bootstrap/_type.scss */
 ul,
 ol {
   margin-top: 0;
   margin-bottom: 10px;
 }
-/* line 162, scss/bootstrap/_type.scss */
+/* line 167, scss/bootstrap/_type.scss */
 ul ul,
 ul ol,
 ol ul,
@@ -4073,43 +4079,43 @@ ol ol {
   margin-bottom: 0;
 }
 
-/* line 176, scss/bootstrap/_type.scss */
+/* line 181, scss/bootstrap/_type.scss */
 .list-unstyled {
   padding-left: 0;
   list-style: none;
 }
 
-/* line 182, scss/bootstrap/_type.scss */
+/* line 187, scss/bootstrap/_type.scss */
 .list-inline {
   padding-left: 0;
   list-style: none;
   margin-left: -5px;
 }
-/* line 186, scss/bootstrap/_type.scss */
+/* line 191, scss/bootstrap/_type.scss */
 .list-inline > li {
   display: inline-block;
   padding-left: 5px;
   padding-right: 5px;
 }
 
-/* line 194, scss/bootstrap/_type.scss */
+/* line 199, scss/bootstrap/_type.scss */
 dl {
   margin-top: 0;
   margin-bottom: 20px;
 }
 
-/* line 198, scss/bootstrap/_type.scss */
+/* line 203, scss/bootstrap/_type.scss */
 dt,
 dd {
   line-height: 1.42857;
 }
 
-/* line 202, scss/bootstrap/_type.scss */
+/* line 207, scss/bootstrap/_type.scss */
 dt {
   font-weight: bold;
 }
 
-/* line 205, scss/bootstrap/_type.scss */
+/* line 210, scss/bootstrap/_type.scss */
 dd {
   margin-left: 0;
 }
@@ -4124,7 +4130,7 @@ dd {
   clear: both;
 }
 @media (min-width: 992px) {
-  /* line 220, scss/bootstrap/_type.scss */
+  /* line 225, scss/bootstrap/_type.scss */
   .dl-horizontal dt {
     float: left;
     width: 160px;
@@ -4134,38 +4140,38 @@ dd {
     text-overflow: ellipsis;
     white-space: nowrap;
   }
-  /* line 227, scss/bootstrap/_type.scss */
+  /* line 232, scss/bootstrap/_type.scss */
   .dl-horizontal dd {
     margin-left: 180px;
   }
 }
 
-/* line 238, scss/bootstrap/_type.scss */
+/* line 243, scss/bootstrap/_type.scss */
 abbr[title],
 abbr[data-original-title] {
   cursor: help;
   border-bottom: 1px dotted #777777;
 }
 
-/* line 244, scss/bootstrap/_type.scss */
+/* line 249, scss/bootstrap/_type.scss */
 .initialism {
   font-size: 90%;
 }
 
-/* line 250, scss/bootstrap/_type.scss */
+/* line 255, scss/bootstrap/_type.scss */
 blockquote {
   padding: 10px 20px;
   margin: 0 0 20px;
   font-size: 17.5px;
   border-left: 5px solid #eeeeee;
 }
-/* line 259, scss/bootstrap/_type.scss */
+/* line 264, scss/bootstrap/_type.scss */
 blockquote p:last-child,
 blockquote ul:last-child,
 blockquote ol:last-child {
   margin-bottom: 0;
 }
-/* line 266, scss/bootstrap/_type.scss */
+/* line 271, scss/bootstrap/_type.scss */
 blockquote footer,
 blockquote small,
 blockquote .small {
@@ -4174,14 +4180,14 @@ blockquote .small {
   line-height: 1.42857;
   color: #777777;
 }
-/* line 274, scss/bootstrap/_type.scss */
+/* line 279, scss/bootstrap/_type.scss */
 blockquote footer:before,
 blockquote small:before,
 blockquote .small:before {
   content: '\2014 \00A0';
 }
 
-/* line 283, scss/bootstrap/_type.scss */
+/* line 288, scss/bootstrap/_type.scss */
 .blockquote-reverse,
 blockquote.pull-right {
   padding-right: 15px;
@@ -4190,7 +4196,7 @@ blockquote.pull-right {
   border-left: 0;
   text-align: right;
 }
-/* line 295, scss/bootstrap/_type.scss */
+/* line 300, scss/bootstrap/_type.scss */
 .blockquote-reverse footer:before,
 .blockquote-reverse small:before,
 .blockquote-reverse .small:before,
@@ -4199,7 +4205,7 @@ blockquote.pull-right small:before,
 blockquote.pull-right .small:before {
   content: '';
 }
-/* line 296, scss/bootstrap/_type.scss */
+/* line 301, scss/bootstrap/_type.scss */
 .blockquote-reverse footer:after,
 .blockquote-reverse small:after,
 .blockquote-reverse .small:after,
@@ -4209,7 +4215,7 @@ blockquote.pull-right .small:after {
   content: '\00A0 \2014';
 }
 
-/* line 303, scss/bootstrap/_type.scss */
+/* line 308, scss/bootstrap/_type.scss */
 address {
   margin-bottom: 20px;
   font-style: normal;
@@ -10786,41 +10792,53 @@ button.close {
   background-color: #eeeeee;
   padding: 15px 0;
 }
+@media (min-width: 992px) {
+  /* line 90, scss/_styles.scss */
+  #news-latest .teaser-news {
+    min-height: 300px;
+  }
+}
+@media (min-width: 1200px) {
+  /* line 90, scss/_styles.scss */
+  #news-latest .teaser-news {
+    min-height: 360px;
+  }
+}
 
-/* line 91, scss/_styles.scss */
+/* line 101, scss/_styles.scss */
 .teaser {
   background-color: #fff;
   margin-bottom: 15px;
 }
-/* line 96, scss/_styles.scss */
+/* line 106, scss/_styles.scss */
 .teaser .row {
   margin: 0;
 }
-/* line 99, scss/_styles.scss */
+/* line 109, scss/_styles.scss */
 .teaser div[class^="col-"] {
   padding: 0;
 }
-/* line 103, scss/_styles.scss */
+/* line 113, scss/_styles.scss */
 .teaser .inner {
   padding: 15px;
 }
 
-/* line 109, scss/_styles.scss */
+/* line 119, scss/_styles.scss */
 .teaser-event {
   border: 1px solid #CCA85A;
 }
 
-/* line 117, scss/_styles.scss */
+/* line 127, scss/_styles.scss */
 .event-meta .event-category {
   text-transform: uppercase;
   color: #777777;
 }
 
-/* line 124, scss/_styles.scss */
+/* line 134, scss/_styles.scss */
 .content-article header {
   position: relative;
 }
-/* line 128, scss/_styles.scss */
+/* line 138, scss/_styles.scss */
 .content-article header h1 {
   position: absolute;
   bottom: 0;
@@ -10839,20 +10857,20 @@ button.close {
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.65) 100%);
 }
 
-/* line 145, scss/_styles.scss */
+/* line 155, scss/_styles.scss */
 #meta-nav {
   padding: 15px 0;
 }
-/* line 147, scss/_styles.scss */
+/* line 157, scss/_styles.scss */
 #meta-nav ul {
   text-align: center;
   margin: 0;
 }
-/* line 151, scss/_styles.scss */
+/* line 161, scss/_styles.scss */
 #meta-nav li {
   display: inline-block;
 }
-/* line 152, scss/_styles.scss */
+/* line 162, scss/_styles.scss */
 #meta-nav a {
   font-size: 12px;
 }

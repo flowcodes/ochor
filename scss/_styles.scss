@@ -86,6 +86,16 @@ body {
 	background-color: $gray-lighter;
 	@extend .clearfix;
 	padding: $inner-padding 0;
+
+	.teaser-news {
+		@media (min-width: $screen-md){
+			min-height: 300px;
+		}
+		@media (min-width: $screen-lg){
+			min-height: 360px;
+		}
+	}
+
 }
 
 .teaser {

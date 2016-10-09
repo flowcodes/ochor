@@ -59,6 +59,11 @@ p {
   margin: 0 0 ($line-height-computed / 2);
 }
 
+.kicker {
+  text-transform: uppercase;
+  font-size: $font-size-small;
+}
+
 .lead {
   margin-bottom: $line-height-computed;
   font-size: $font-size-large;

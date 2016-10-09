@@ -32,25 +32,10 @@ get_header(); ?>
           </div>
           <div class="col-md-5">
 
-            <div id="featured">
-              <article class="teaser teaser-news">
-                <div class="row">
-                  <div class="col-xs-5">
-                    <a href="#">
-                      <img src="img/news.jpg" alt="" class="img-responsive" />
-                    </a>
-                  </div>
-                  <div class="col-xs-7">
-                    <div class="inner">
-                      <time>3. Okt 2016</time>
-                      <h1 class="h4">
-                        <a href="#">Nulla vitae elit libero, a pharetra augue.</a>
-                      </h1>
-                    </div>
-                  </div>
-                </div>
-              </article>
-            </div>
+						<?php $feature_query = new WP_Query( 'category_name=Featured&posts_per_page=1' ); ?>
+						<?php while ( $feature_query->have_posts() ) : $feature_query->the_post(); ?>
+								<?php get_template_part( 'content', 'featured' ); ?>
+						<?php endwhile; ?>
 
           </div>
         </div>
@@ -58,15 +43,84 @@ get_header(); ?>
     </div>
   </section>
 
+	<section id="events-latest">
+	<div class="container">
+			<h4>Proben &amp; Konzerte</h4>
+
+			<div class="row">
+
+				<div class="col-sm-6 col-md-3">
+					<article class="teaser teaser-event">
+						<div class="inner">
+							<div class="event-meta">
+								<time class="event-date">3. Okt 2016</time>
+								<span class="event-category">Konzert</span>
+							</div>
+
+							<h1 class="h4">
+								<a href="#">Nulla vitae elit libero, a pharetra augue.</a>
+							</h1>
+						</div>
+					</article>
+				</div>
+
+				<div class="col-sm-6 col-md-3">
+					<article class="teaser teaser-event">
+						<div class="inner">
+							<div class="event-meta">
+								<time class="event-date">3. Okt 2016</time>
+								<span class="event-category">Proben</span>
+							</div>
+							<h1 class="h4">
+								<a href="#">Nulla vitae elit libero, a pharetra augue.</a>
+							</h1>
+						</div>
+					</article>
+				</div>
+
+				<div class="col-sm-6 col-md-3">
+					<article class="teaser teaser-event">
+						<div class="inner">
+							<div class="event-meta">
+								<time class="event-date">3. Okt 2016</time>
+								<span class="event-category">Proben</span>
+							</div>
+							<h1 class="h4">
+								<a href="#">Nulla vitae elit libero, a pharetra augue.</a>
+							</h1>
+						</div>
+					</article>
+				</div>
+
+				<div class="col-sm-6 col-md-3">
+					<article class="teaser teaser-event">
+						<div class="inner">
+							<div class="event-meta">
+								<time class="event-date">3. Okt 2016</time>
+								<span class="event-category">Proben</span>
+							</div>
+							<h1 class="h4">
+								<a href="#">Nulla vitae elit libero, a pharetra augue.</a>
+							</h1>
+						</div>
+					</article>
+				</div>
+
+			</div>
+	</div>
+</section>
+
 	<section id="news-latest">
     <div class="container">
       <div class="row">
 
-				<?php if ( have_posts() ) : ?>
+				<?php $main_query = new WP_Query( 'cat= -8' ); ?>
+
+				<?php if ( $main_query->have_posts() ) : ?>
 
 					<?php
 					// Start the loop.
-					while ( have_posts() ) : the_post();
+					while ( $main_query->have_posts() ) : $main_query->the_post();
 
 						/*
 						 * Include the Post-Format-specific template for the content.

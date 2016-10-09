@@ -44,7 +44,7 @@ function twentyfifteen_setup() {
 	 * See: https://codex.wordpress.org/Function_Reference/add_theme_support#Post_Thumbnails
 	 */
 	add_theme_support( 'post-thumbnails' );
-	set_post_thumbnail_size( 825, 510, true );
+	set_post_thumbnail_size( 540, 360, true );
 
 	// This theme uses wp_nav_menu() in two locations.
 	register_nav_menus( array(
@@ -217,3 +217,6 @@ function remheadlink()
 	remove_action('wp_head', 'wp_shortlink_header', 10, 0);
 	remove_action('wp_head', 'adjacent_posts_rel_link_wp_head', 10, 0);
 	}
+
+
+ add_post_meta($post_id, $meta_key, $meta_value, $unique);
